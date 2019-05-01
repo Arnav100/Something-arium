@@ -7,9 +7,8 @@
  */
 public abstract class Animal
 {
-    public int sampleMethod(int y)
+    public int sampleMethod(int x)
     {
-    
-        return y;
+        return x;
     }
 }
