@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Animal
+comment0.text=\n\ Abstract\ class\ Animal\ -\ write\ a\ description\ of\ the\ class\ here\n\n\ @author\ (your\ name\ here)\n\ @version\ (version\ number\ or\ date\ here)\n
+comment1.params=y
+comment1.target=int\ sampleMethod(int)
+numComments=2
