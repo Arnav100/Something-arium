@@ -7,18 +7,17 @@
  */
 public class FHawk extends Hawk implements Female
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
     /**
      * Constructor for objects of class FHawk
      */
     public FHawk()
     {
-        // initialise instance variables
-        x = 0;
+        super();
     }
 
+    /**
+     * 
+     */
     public int reproduce()
     {
         return -1;

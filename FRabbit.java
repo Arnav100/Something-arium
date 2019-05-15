@@ -15,10 +15,12 @@ public class FRabbit extends Rabbit implements Female
      */
     public FRabbit()
     {
-        // initialise instance variables
-        x = 0;
+        super();
     }
 
+    /**
+     * 
+     */
     public int reproduce()
     {
         return -1;

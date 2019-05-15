@@ -5,14 +5,16 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class Plant 
+public abstract class Plant
 {
     private double plantDensity;
     private double speciesMass; 
     private double relativeGrowthRate;
     private double maxSpeciesMass;
     private double maxIndiviualMass;
-    public Plant(int maxIndiviualMass, double plantDensity, double relativeGrowthRate, double acres)
+    
+    public Plant( int maxIndiviualMass, double plantDensity, double relativeGrowthRate,
+    double acres )
     {
         this.plantDensity = plantDensity;
         this.relativeGrowthRate = relativeGrowthRate;
@@ -28,7 +30,7 @@ public abstract class Plant
          speciesMass = maxSpeciesMass;
     }
     
-    public void reduce(double amountEaten)
+    public void reduce( double amountEaten )
     {
         speciesMass -= amountEaten;
     }
@@ -37,9 +39,6 @@ public abstract class Plant
     {
         return speciesMass;
     }
-    
-    public void printMass(String name)
-    {
-        System.out.println("The mass of the "+name+" are: " + getMass());
-    }
+    //UI Method?
+    //Needed?
 }
