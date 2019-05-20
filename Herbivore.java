@@ -7,5 +7,4 @@
  */
 public interface Herbivore
 {
-    int sampleMethod(int y);
 }

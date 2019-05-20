@@ -6,4 +6,5 @@ comment1.target=FHawk()
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ FHawk\r\n
 comment2.params=
 comment2.target=int\ reproduce()
+comment2.text=\r\n\ \r\n
 numComments=3
