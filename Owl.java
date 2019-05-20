@@ -18,4 +18,20 @@ public class Owl extends Animal implements Herbivore, Carnivore
     {
         super( STARTING_MASS, MAX_MASS, MAX_AGE );
     }
+    
+    /**
+     * 
+     */
+    public String getType()
+    {
+        return "owl";
+    }
+    
+    /**
+     * 
+     */
+    public String[] getFoodTypes()
+    {
+        return new String[]{ "oak", "rose", "rabbit" };
+    }
 }
