@@ -72,7 +72,7 @@ public class UI
     {
         return plantCovs;
 
-        }
+    }
     
     public void printMass( Plant plant, String name )
     {
