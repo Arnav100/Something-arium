@@ -18,4 +18,20 @@ public class Jackal extends Animal implements Carnivore
     {
         super( STARTING_MASS, MAX_MASS, MAX_AGE );
     }
+    
+    /**
+     * 
+     */
+    public String getType()
+    {
+        return "jackal";
+    }
+    
+    /**
+     * 
+     */
+    public String[] getFoodTypes()
+    {
+        return new String[]{ "goat", "rabbit" };
+    }
 }

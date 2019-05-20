@@ -18,4 +18,20 @@ public class Rabbit extends Animal implements Herbivore
     {
         super( STARTING_MASS, MAX_MASS, MAX_AGE );
     }
+    
+    /**
+     * 
+     */
+    public String getType()
+    {
+        return "rabbit";
+    }
+    
+    /**
+     * 
+     */
+    public String[] getFoodTypes()
+    {
+        return new String[]{ "brush" };
+    }
 }
