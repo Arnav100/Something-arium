@@ -24,10 +24,14 @@ public class UI
         animalPops = new int[ NUM_ANIMALS ];
         String[] animalNames = { "Wild Goat", "Black Tailed Rabbit", "Great Horned Owl",
             "Red-Tailed Hawk", "Golden Jackal", "Puma" };
+            
+        Animal[][] animals = new Animal[NUM_ANIMALS][];
         for( int i = 0; i < animalPops.length; i++ )
         {
             System.out.print( animalNames[ i ] + ": " );
-            animalPops[ i ] = in.nextInt();
+            int pop = in.nextInt();
+            
+            
             System.out.print( "\n" );
         }
         
@@ -43,6 +47,20 @@ public class UI
 
         }        
 
+    }
+    
+    public Animal makeAnimal(String type)
+    {
+        switch(type)
+        {
+            case "Wild Goat": 
+               return new Goat();
+            case "Black Tailed Rabbit":
+                return new Rabbit();
+            case "Great Horned Owl":
+                return new Owl();
+        }
+        return null;
     }
     
     public int[] getAnimalPops()
