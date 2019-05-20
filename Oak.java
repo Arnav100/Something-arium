@@ -13,4 +13,8 @@ public class Oak extends Plant
         super(18000, 30, 12, acres);
     }    
    
+    public void printMass()
+    {
+        super.printMass("Oak");
+    }
 }

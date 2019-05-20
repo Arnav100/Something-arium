@@ -7,16 +7,12 @@
  */
 public class FJackal extends Jackal implements Female
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
     /**
      * Constructor for objects of class FJackal
      */
     public FJackal()
     {
-        // initialise instance variables
-        x = 0;
     }
 
     public int reproduce()

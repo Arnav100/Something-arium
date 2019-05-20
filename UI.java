@@ -35,10 +35,17 @@ public class UI
             System.out.print( plantNames[ i ] + ": " );
             plantCovs[ i ] = in.nextInt();
             System.out.print( "\n" );
-        }
-        
-        Oak oak = new Oak();
-        oak.setAcreage(plantCovs[1]);
-        oak.printMass();
+        }        
+
+    }
+    
+    public int[] getAnimalPops()
+    {
+        return animalPops;
+    }
+    
+    public int[] getPlantCovs()
+    {
+        return plantCovs;
     }
 }

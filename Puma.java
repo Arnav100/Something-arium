@@ -15,7 +15,6 @@ public class Puma extends Animal implements Carnivore
      */
     public Puma()
     {
-        // initialise instance variables
         x = 0;
     }
 
