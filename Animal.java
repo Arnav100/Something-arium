@@ -42,4 +42,8 @@ public abstract class Animal
     {
         isAlive = false;
     }
+    
+    public abstract String getType();
+    
+    public abstract String[] getFoodTypes();
 }

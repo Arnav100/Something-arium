@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Plant
-comment0.text=\r\n\ Abstract\ class\ Plant\ -\ write\ a\ description\ of\ the\ class\ here\r\n\r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ number\ or\ date\ here)\r\n
+comment0.text=\n\ Abstract\ class\ Plant\ -\ write\ a\ description\ of\ the\ class\ here\n\n\ @author\ (your\ name\ here)\n\ @version\ (version\ number\ or\ date\ here)\n
 comment1.params=maxIndiviualMass\ plantDensity\ relativeGrowthRate\ acres
 comment1.target=Plant(int,\ double,\ double,\ double)
 comment2.params=
@@ -9,4 +9,6 @@ comment3.params=amountEaten
 comment3.target=void\ reduce(double)
 comment4.params=
 comment4.target=double\ getMass()
-numComments=5
+comment5.params=
+comment5.target=java.lang.String\ getType()
+numComments=6

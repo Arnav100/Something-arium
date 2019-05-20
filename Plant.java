@@ -39,6 +39,7 @@ public abstract class Plant
     {
         return speciesMass;
     }
-    //UI Method?
-    //Needed?
+    
+    public abstract String getType();
+
 }
