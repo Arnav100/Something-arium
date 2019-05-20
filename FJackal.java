@@ -13,8 +13,12 @@ public class FJackal extends Jackal implements Female
      */
     public FJackal()
     {
+        super();
     }
 
+    /**
+     * 
+     */
     public int reproduce()
     {
         return -1;
