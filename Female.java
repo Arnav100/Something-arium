@@ -14,5 +14,5 @@ public interface Female
      * @return   the result produced by sampleMethod
      */
     
-    public int reproduce();
+    public Animal[] reproduce();
 }
