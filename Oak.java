@@ -7,7 +7,7 @@
  */
 public class Oak extends Plant
 {
-    private static final int MAX_MASS = 18000;
+    private static final double MAX_MASS = 18000;
     private static final double PLANT_DENSITY = 30;
     private static final double GROWTH_RATE = 12;
     
@@ -19,5 +19,15 @@ public class Oak extends Plant
     public Oak(double acres)
     {
         super( MAX_MASS, PLANT_DENSITY, GROWTH_RATE, acres);
+    }
+    
+    public void printMass()
+    {
+        super.printMass( "Oak" );
+    }
+    
+    public String getType()
+    {
+        return "oak";
     }
 }

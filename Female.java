@@ -15,4 +15,12 @@ public interface Female
      */
     
     public int reproduce();
+    
+    public int getWeaningAge();
+    
+    public int getGestationDuration();
+    
+    public int getInterbirthInterval();
+    
+    public int isPregnant();
 }

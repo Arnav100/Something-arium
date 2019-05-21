@@ -5,15 +5,16 @@
  * @author (your name here)
  * @version (version number or date here)
  */
-public abstract class Plant
+public abstract class Plant implements Organism
 {
     private double plantDensity;
     private double speciesMass; 
     private double relativeGrowthRate;
     private double maxSpeciesMass;
     private double maxIndiviualMass;
+    private boolean isAlive;
     
-    public Plant( int maxIndiviualMass, double plantDensity, double relativeGrowthRate,
+    public Plant( double maxIndiviualMass, double plantDensity, double relativeGrowthRate,
     double acres )
     {
         this.plantDensity = plantDensity;
@@ -33,6 +34,8 @@ public abstract class Plant
     public void reduce( double amountEaten )
     {
         speciesMass -= amountEaten;
+        if(speciesMass < 0)
+            isAlive = false;
     }
    
     public double getMass()
@@ -40,6 +43,16 @@ public abstract class Plant
         return speciesMass;
     }
     
+    public boolean isAlive()
+    {
+        return isAlive;
+    }
+    
+    public void printMass(String name)
+    {
+        System.out.println("Mass of " + name + " is " + speciesMass);
+    }
+    
     public abstract String getType();
-
+    
 }

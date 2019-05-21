@@ -1,33 +1,33 @@
 
 /**
- * Write a description of class Rose here.
+ * Creates and analyzes Rose species objects
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Gabe Robare
+ * @version May 20, 2019
  */
 public class Rose extends Plant
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    private static final double MAX_MASS = 18000;
+    private static final double PLANT_DENSITY = 30;
+    private static final double GROWTH_RATE = 12;
+    
     /**
-     * Constructor for objects of class Rose
+     * Creates Rose species objects of a certain area in acres
+     * 
+     * @param acres the amount of acres that the Rose object covers
      */
-    public Rose()
+    public Rose(double acres)
     {
-        // initialise instance variables
-        x = 0;
+        super( MAX_MASS, PLANT_DENSITY, GROWTH_RATE, acres);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    public void printMass()
     {
-        // put your code here
-        return x + y;
+        super.printMass( "Rose" );
+    }
+    
+    public String getType()
+    {
+        return "rose";
     }
 }

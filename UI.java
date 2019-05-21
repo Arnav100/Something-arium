@@ -7,8 +7,8 @@ import java.util.Scanner;
  */
 public class UI
 {
-    private int[] animalPops;
-    private int[] plantCovs;
+    private Animal[][] animals;
+    private Plant[] plants;
     private final int NUM_ANIMALS = 6;
     private final int NUM_PLANTS = 3;
     
@@ -21,28 +21,28 @@ public class UI
         Scanner in = new Scanner( System.in );
         System.out.println( "Please enter a starting population number for each of the " +
         "following:" + "\n\n" );
-        animalPops = new int[ NUM_ANIMALS ];
         String[] animalNames = { "Wild Goat", "Black Tailed Rabbit", "Great Horned Owl",
             "Red-Tailed Hawk", "Golden Jackal", "Puma" };
             
-        Animal[][] animals = new Animal[NUM_ANIMALS][];
-        for( int i = 0; i < animalPops.length; i++ )
+        animals = new Animal[NUM_ANIMALS][];
+        for( int i = 0; i < animals.length; i++ )
         {
             System.out.print( animalNames[ i ] + ": " );
-            int pop = in.nextInt();
-            
+            animals[i] = new Animal[in.nextInt()];
+            for(int j = 0; j < animals[i].length; j ++)
+                animals[i][j] = makeAnimal(animalNames[i]);
             
             System.out.print( "\n" );
         }
         
         System.out.println( "Please enter a starting acreage of coverage for each of " +
         "the following (note: 1 acre = 43,560 sqft):" + "\n\n" );
-        plantCovs = new int[ NUM_PLANTS ];
+        plants = new Plant[NUM_PLANTS];
         String[] plantNames = { "Coyote Brush", "Blue Oak", "Mountain Mahogany" };
-        for( int i = 0; i < plantNames.length; i++ )
+        for( int i = 0; i < plants.length; i++ )
         {
             System.out.print( plantNames[ i ] + ": " );
-            plantCovs[ i ] = in.nextInt();
+            plants[ i ] = makePlant(plantNames[i], in.nextInt());
             System.out.print( "\n" );
 
         }        
@@ -51,26 +51,49 @@ public class UI
     
     public Animal makeAnimal(String type)
     {
+        boolean isFemale = Math.random() < 0.5;
         switch(type)
         {
             case "Wild Goat": 
-               return new Goat();
+               return isFemale ? new FGoat() : new Goat();
             case "Black Tailed Rabbit":
-                return new Rabbit();
+                return isFemale ? new FRabbit() : new Rabbit();
             case "Great Horned Owl":
-                return new Owl();
+                return isFemale ? new FOwl() : new Owl();
+            case "Red-Tailed Hawk":
+                return isFemale ? new FHawk() : new Hawk();
+            case "Golden Jackal":
+                return isFemale ? new FJackal() : new Jackal();
+            case "Puma":
+                return isFemale ? new FPuma() : new Puma();
         }
+        System.out.println("ERROR: " + type + " NOT FOUND!");
         return null;
     }
     
-    public int[] getAnimalPops()
+    public Plant makePlant(String type, int acres)
     {
-        return animalPops;
+        switch(type)
+        {
+            case"Coyote Brush":
+                return new Brush(acres);
+            case "Blue Oak":
+                return new Oak(acres);
+            case "Mountain Mahogany":
+                return new Rose(acres);
+        }
+        System.out.println("ERROR: " + type + " NOT FOUND!");
+        return null;
     }
     
-    public int[] getPlantCovs()
+    public Animal[][] getAnimals()
     {
-        return plantCovs;
+        return animals;
+    }
+    
+    public Plant[] getPlants()
+    {
+        return plants;
 
     }
     
