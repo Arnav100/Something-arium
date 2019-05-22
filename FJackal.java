@@ -11,7 +11,6 @@ public class FJackal extends Jackal implements Female
     private static int totalBorn = 0;
     private final int MAX_LITTER_SIZE = 8;
     private final int LITTER_SIZE = 4;
-    private final int WEANING_AGE = 56;
     private final int GESTATION_DURATION = 63;
     private final int INTERBIRTH_INTERVAL = 365;
     private boolean isPregnant;
@@ -22,11 +21,6 @@ public class FJackal extends Jackal implements Female
     public FJackal()
     {
         super();
-    }
-
-    public int getWeaningAge()
-    {
-        return WEANING_AGE;
     }
     
     public int getGestationDuration()
