@@ -11,6 +11,10 @@ public class FHawk extends Hawk implements Female
     private static int totalBorn = 0;
     private static final int MAX_LITTER_SIZE = 5;
     private static final int LITTER_SIZE = 3;
+    private final int WEANING_AGE = 45;
+    private final int GESTATION_DURATION = 30;
+    private final int INTERBIRTH_INTERVAL = 330;
+    private boolean isPregnant;
     
     /**
      * Constructor for objects of class FGoat
@@ -20,6 +24,26 @@ public class FHawk extends Hawk implements Female
         super();
     }
 
+    public int getWeaningAge()
+    {
+        return WEANING_AGE;
+    }
+    
+    public int getGestationDuration()
+    {
+        return GESTATION_DURATION;
+    }
+    
+    public int getInterbirthInterval()
+    {
+        return INTERBIRTH_INTERVAL;
+    }
+    
+    public boolean isPregnant()
+    {
+        return isPregnant;
+    }
+    
     /**
      * 
      */
