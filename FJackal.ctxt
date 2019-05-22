@@ -3,15 +3,8 @@ comment0.target=FJackal
 comment0.text=\n\ Write\ a\ description\ of\ class\ FJackal\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=FJackal()
-<<<<<<< HEAD
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ FJackal\n
-comment2.params=
-comment2.target=int\ reproduce()
-comment2.text=\n\ \n
-=======
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ FGoat\r\n
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ FGoat\n
 comment2.params=
 comment2.target=Animal[]\ reproduce()
-comment2.text=\r\n\ \r\n
->>>>>>> 01b6cec1606fbed90afab1a97b0c55eafdf24ce0
+comment2.text=\n\ \n
 numComments=3

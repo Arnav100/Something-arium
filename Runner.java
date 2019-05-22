@@ -30,6 +30,11 @@ public class Runner
          */
     }
 
+    private static void test(Animal a)
+    {
+        a.die();
+    }
+    
     private static void newDay()
     {
          for(Animal[] group : animals)
@@ -65,33 +70,22 @@ public class Runner
                 {
                     String[] foodChoices = animals[i][j].getFoodTypes();
                     int choice = (int)(Math.random() * foodChoices.length);
-                    int[] mealLocation = findFood(foodChoices[choice], animals[i][j].getType());
+                    Organism meal = findFood(foodChoices[choice], animals[i][j].getType());
 
-                    if(mealLocation == null)
-                        animals[i][j].eat(null);
-                    else if(mealLocation.length == 1) //If it is a plant, eat it, and register how much you ate
-                    {
-                        double massEaten = animals[i][j].eat(plants[mealLocation[0]]);
-                        plants[mealLocation[0]].reduce(massEaten);
-                    }
-                    else if(mealLocation.length == 2) //If it is an animal, eat it and kill it
-                    {
-                        animals[i][j].eat(animals[ mealLocation[0] ][ mealLocation[1] ]);
-                        animals[ mealLocation[0] ][ mealLocation[1] ].die();
-                    }
+                    animals[i][j].eat(meal);
                 }
             }   
         }
     }
-    private static int[] findFood(String food, String animalSearching)
+    private static Organism findFood(String food, String animalSearching)
     {
         for(int i = 0; i < plants.length; i ++)
             if(plants[i].getType().equals(food))
-                return new int[]{i};
+                return plants[i];
         for(int i = 0; i < animals.length; i ++)
             for(int j = 0; j < animals[i].length; j++)
                 if(animals[i][j].isAlive() && animals[i][j].getType().equals(food))
-                    return new int[]{i, j};
+                    return animals[i][j];
         System.out.println("ERROR: " + food + " NOT FOUND AS FOOD FOR " + animalSearching);  //Or all creatures are dead
         return null;
     }

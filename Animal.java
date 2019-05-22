@@ -13,7 +13,7 @@ public abstract class Animal implements Organism
     private double maxMass;
     private boolean isAlive;
     private int daysAlive;
-    
+    private int fertileAge;
     private final double STARVATION_DECREASE = 0.05;
     private double hunger; 
     
@@ -43,32 +43,30 @@ public abstract class Animal implements Organism
         return age;
     }
     
-    public double eat(Organism food)
+    public void eat(Organism food)
     {
         if(food == null)
         {
             this.mass -= STARVATION_DECREASE * mass;
             hunger = 0;
-            return -2;
         }
         double mass = food.getMass();
         if(food instanceof Plant)
         {
             Plant plantFood = (Plant) food;
-            if(hunger < mass)   //If the plant has more mass than the animal can eat, just eat how much it needs
+            if(hunger < mass*0.1)   //If the plant has more mass than the animal can eat, just eat how much it needs
             {
                 feed(hunger);
-                return hunger;
+                plantFood.reduce(hunger*10);
             }
             else //If the plant isn't more than it can eat, eat it all
             {
                 feed(mass);
-                return mass;
+                plantFood.reduce(mass);
             }
         }
         //If it is an animal, just eat it
         feed(mass);
-        return -1;
     }
     
     private void feed(double mass)
@@ -83,8 +81,12 @@ public abstract class Animal implements Organism
     
     public void hungerReset()
     {
-        hunger = 0.1 * mass;
         daysAlive ++;
+        if(daysAlive < fertileAge)
+           hunger = maxMass/fertileAge;
+        
+        hunger = 0.1 * mass;
+        
     }
     
     public boolean isHungry()
