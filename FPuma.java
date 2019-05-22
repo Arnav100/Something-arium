@@ -11,7 +11,6 @@ public class FPuma extends Puma implements Female
     private static int totalBorn = 0;
     private final int MAX_LITTER_SIZE = 6;
     private final int LITTER_SIZE = 3;
-    private final int WEANING_AGE = 730;
     private final int GESTATION_DURATION = 91;
     private final int INTERBIRTH_INTERVAL = 730;
     private int pregStartAge;
@@ -23,11 +22,6 @@ public class FPuma extends Puma implements Female
     public FPuma()
     {
         super();
-    }
-
-    public int getWeaningAge()
-    {
-        return WEANING_AGE;
     }
     
     public int getGestationDuration()

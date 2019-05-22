@@ -11,7 +11,6 @@ public class FOwl extends Owl implements Female
     private static int totalBorn = 0;
     private static final int MAX_LITTER_SIZE = 6;
     private static final int LITTER_SIZE = 3;
-    private final int WEANING_AGE = 50;
     private final int GESTATION_DURATION = 35;
     private final int INTERBIRTH_INTERVAL = 91;
     private boolean isPregnant;
@@ -22,11 +21,6 @@ public class FOwl extends Owl implements Female
     public FOwl()
     {
         super();
-    }
-
-    public int getWeaningAge()
-    {
-        return WEANING_AGE;
     }
     
     public int getGestationDuration()
