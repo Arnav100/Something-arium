@@ -21,11 +21,12 @@ public abstract class Animal implements Organism
     
     private static char nameChar = 'a';
     public String name;
-    public Animal(double startingMass, double maxMass, int maxAge)
+    public Animal(double startingMass, double maxMass, int maxAge, int fertileAge )
     {
         this.mass = startingMass;
         this.maxMass = maxMass;
         this.maxAge = maxAge;
+        this.fertileAge = fertileAge;
         this.isAlive = true;
         daysAlive = -1;
         hungerReset();
