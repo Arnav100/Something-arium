@@ -14,6 +14,7 @@ public class FPuma extends Puma implements Female
     private final int WEANING_AGE = 730;
     private final int GESTATION_DURATION = 91;
     private final int INTERBIRTH_INTERVAL = 730;
+    private int pregStartAge;
     private boolean isPregnant;
     
     /**
@@ -39,6 +40,20 @@ public class FPuma extends Puma implements Female
         return INTERBIRTH_INTERVAL;
     }
     
+    public void startPregnancy()
+    {
+        if(!isPregnant && isFertile() && getDaysAlive() > pregStartAge + getInterbirthInterval() + getGestationDuration()  )
+        {
+            pregStartAge = getDaysAlive();
+            isPregnant = true;
+        }
+    }
+    
+    public boolean isFertile()
+    {
+        return getDaysAlive() > getFertileAge();
+    }
+    
     public boolean isPregnant()
     {
         return isPregnant;
@@ -49,6 +64,7 @@ public class FPuma extends Puma implements Female
      */
     public Animal[] reproduce()
     {
+       
         int size;
         if( totalLitters == 0 )
             size = (int)( ( MAX_LITTER_SIZE + 1 ) * Math.random() );

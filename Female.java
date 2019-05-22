@@ -22,5 +22,9 @@ public interface Female
 
     public boolean isPregnant();
     
+    public void startPregnancy();
+    
+    public boolean isFertile();
+    
     public Animal[] reproduce();
 }

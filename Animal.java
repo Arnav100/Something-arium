@@ -14,6 +14,7 @@ public abstract class Animal implements Organism
     private boolean isAlive;
     private int daysAlive;
     private int fertileAge;
+    private int weaningAge;
     private final double STARVATION_DECREASE = 0.05;
     private double hunger; 
     
@@ -42,6 +43,11 @@ public abstract class Animal implements Organism
     public int getAge(int age)
     {
         return age;
+    }
+    
+    public int getDaysAlive()
+    {
+        return daysAlive;
     }
     
     public void eat(Organism food)
@@ -106,6 +112,16 @@ public abstract class Animal implements Organism
     public boolean isAlive()
     {
         return isAlive;
+    }
+    
+    public void becomeAdult()
+    {
+        daysAlive = weaningAge;
+    }
+    
+    public int getFertileAge()
+    {
+        return fertileAge;
     }
     
     public abstract String getType();

@@ -30,7 +30,10 @@ public class UI
             System.out.print( animalNames[ i ] + ": " );
             animals[i] = new Animal[in.nextInt()];
             for(int j = 0; j < animals[i].length; j ++)
+            {
                 animals[i][j] = makeAnimal(animalNames[i]);
+                animals[i][j].becomeAdult();
+            }
             
             System.out.print( "\n" );
         }
@@ -94,7 +97,6 @@ public class UI
     public Plant[] getPlants()
     {
         return plants;
-
     }
     
     public void printMass( Plant plant, String name )
