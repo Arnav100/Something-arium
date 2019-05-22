@@ -14,12 +14,13 @@ public interface Female
      * @return   the result produced by sampleMethod
      */
     
-    // public int getWeaningAge();
+    public int getWeaningAge();
     
-    // public int getGestationDuration();
+    public int getGestationDuration();
     
-    // public int getInterbirthInterval();
+    public int getInterbirthInterval();
+
+    public boolean isPregnant();
     
-    // public int isPregnant();
     public Animal[] reproduce();
 }

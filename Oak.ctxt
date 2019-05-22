@@ -1,11 +1,7 @@
 #BlueJ class context
 comment0.target=Oak
-comment0.text=\n\ Creates\ and\ analyzes\ Oak\ species\ objects\n\n\ @author\ Gabe\ Robare\n\ @version\ May\ 6,\ 2019\n
+comment0.text=\r\n\ Creates\ and\ analyzes\ Oak\ species\ objects\r\n\r\n\ @author\ Gabe\ Robare\r\n\ @version\ May\ 6,\ 2019\r\n
 comment1.params=acres
 comment1.target=Oak(double)
-comment1.text=\n\ Creates\ Oak\ species\ objects\ of\ a\ certain\ area\ in\ acres\n\ \n\ @param\ acres\ the\ amount\ of\ acres\ that\ the\ Oak\ object\ covers\n
-comment2.params=
-comment2.target=void\ printMass()
-comment3.params=
-comment3.target=java.lang.String\ getType()
-numComments=4
+comment1.text=\r\n\ Creates\ Oak\ species\ objects\ of\ a\ certain\ area\ in\ acres\r\n\ \r\n\ @param\ acres\ the\ amount\ of\ acres\ that\ the\ Oak\ object\ covers\r\n
+numComments=2

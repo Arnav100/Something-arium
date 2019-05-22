@@ -2,6 +2,7 @@
 dependency1.from=UI
 dependency1.to=Animal
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 dependency10.from=UI
 dependency10.to=FJackal
 dependency10.type=UsesDependency
@@ -34,6 +35,22 @@ dependency19.to=Animal
 dependency19.type=UsesDependency
 dependency2.from=UI
 dependency2.to=FGoat
+=======
+dependency10.from=FGoat
+dependency10.to=Animal
+dependency10.type=UsesDependency
+dependency11.from=FRabbit
+dependency11.to=Animal
+dependency11.type=UsesDependency
+dependency12.from=FOwl
+dependency12.to=Animal
+dependency12.type=UsesDependency
+dependency13.from=FHawk
+dependency13.to=Animal
+dependency13.type=UsesDependency
+dependency2.from=Runner
+dependency2.to=Goat
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 dependency2.type=UsesDependency
 dependency20.from=Runner
 dependency20.to=UI
@@ -51,15 +68,23 @@ dependency24.from=Animal
 dependency24.to=Plant
 dependency24.type=UsesDependency
 dependency3.from=UI
+<<<<<<< HEAD
 dependency3.to=Goat
 dependency3.type=UsesDependency
 dependency4.from=UI
 dependency4.to=FRabbit
+=======
+dependency3.to=Animal
+dependency3.type=UsesDependency
+dependency4.from=UI
+dependency4.to=Goat
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 dependency4.type=UsesDependency
 dependency5.from=UI
 dependency5.to=Rabbit
 dependency5.type=UsesDependency
 dependency6.from=UI
+<<<<<<< HEAD
 dependency6.to=FOwl
 dependency6.type=UsesDependency
 dependency7.from=UI
@@ -86,6 +111,34 @@ package.editor.y=190
 package.frame.height=798
 package.frame.width=1440
 package.numDependencies=24
+=======
+dependency6.to=Owl
+dependency6.type=UsesDependency
+dependency7.from=UI
+dependency7.to=Plant
+dependency7.type=UsesDependency
+dependency8.from=FJackal
+dependency8.to=Animal
+dependency8.type=UsesDependency
+dependency9.from=FPuma
+dependency9.to=Animal
+dependency9.type=UsesDependency
+editor.fx.0.height=735
+editor.fx.0.width=813
+editor.fx.0.x=157
+editor.fx.0.y=88
+objectbench.height=95
+objectbench.width=527
+package.divider.horizontal=0.6
+package.divider.vertical=0.8692307692307693
+package.editor.height=671
+package.editor.width=796
+package.editor.x=100
+package.editor.y=100
+package.frame.height=876
+package.frame.width=923
+package.numDependencies=13
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 package.numTargets=23
 package.showExtends=true
 package.showUses=true
@@ -100,104 +153,175 @@ target1.name=Runner
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=80
+<<<<<<< HEAD
 target1.x=1040
 target1.y=290
+=======
+target1.x=680
+target1.y=20
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target10.height=50
 target10.name=FHawk
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=80
+<<<<<<< HEAD
 target10.x=100
 target10.y=240
+=======
+target10.x=660
+target10.y=400
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target11.height=50
 target11.name=Hawk
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=80
+<<<<<<< HEAD
 target11.x=10
 target11.y=260
+=======
+target11.x=660
+target11.y=330
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target12.height=50
 target12.name=FJackal
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=80
+<<<<<<< HEAD
 target12.x=300
 target12.y=380
+=======
+target12.x=60
+target12.y=260
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target13.height=50
 target13.name=Plant
 target13.showInterface=false
 target13.type=AbstractTarget
 target13.width=80
+<<<<<<< HEAD
 target13.x=800
 target13.y=260
+=======
+target13.x=350
+target13.y=610
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target14.height=50
 target14.name=UI
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=80
+<<<<<<< HEAD
 target14.x=550
 target14.y=40
+=======
+target14.x=690
+target14.y=560
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target15.height=50
 target15.name=Animal
 target15.showInterface=false
 target15.type=AbstractTarget
 target15.width=80
+<<<<<<< HEAD
 target15.x=420
 target15.y=270
+=======
+target15.x=590
+target15.y=140
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target16.height=50
 target16.name=Oak
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=80
+<<<<<<< HEAD
 target16.x=470
 target16.y=490
+=======
+target16.x=650
+target16.y=470
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target17.height=50
 target17.name=Female
 target17.showInterface=false
 target17.type=InterfaceTarget
 target17.width=80
+<<<<<<< HEAD
 target17.x=130
 target17.y=420
+=======
+target17.x=280
+target17.y=140
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target18.height=50
 target18.name=Goat
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=80
+<<<<<<< HEAD
 target18.x=50
 target18.y=550
+=======
+target18.x=40
+target18.y=330
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target19.height=50
 target19.name=FGoat
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=80
+<<<<<<< HEAD
 target19.x=280
 target19.y=530
+=======
+target19.x=40
+target19.y=400
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target2.height=50
 target2.name=Organism
 target2.showInterface=false
 target2.type=InterfaceTarget
 target2.width=80
+<<<<<<< HEAD
 target2.x=779
 target2.y=445
+=======
+target2.x=520
+target2.y=20
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target20.height=50
 target20.name=Herbivore
 target20.showInterface=false
 target20.type=InterfaceTarget
 target20.width=90
+<<<<<<< HEAD
 target20.x=270
 target20.y=60
+=======
+target20.x=390
+target20.y=10
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target21.height=50
 target21.name=FOwl
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=80
+<<<<<<< HEAD
 target21.x=360
 target21.y=160
+=======
+target21.x=460
+target21.y=400
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target22.height=50
 target22.name=Puma
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=80
+<<<<<<< HEAD
 target22.x=490
 target22.y=380
 target23.height=50
@@ -207,52 +331,98 @@ target23.type=ClassTarget
 target23.width=80
 target23.x=750
 target23.y=120
+=======
+target22.x=90
+target22.y=120
+target23.height=50
+target23.name=Puma
+target23.showInterface=false
+target23.type=ClassTarget
+target23.width=80
+target23.x=90
+target23.y=50
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target3.height=50
 target3.name=Owl
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=80
+<<<<<<< HEAD
 target3.x=10
 target3.y=80
+=======
+target3.x=460
+target3.y=330
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target4.height=50
 target4.name=FRabbit
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=80
+<<<<<<< HEAD
 target4.x=260
 target4.y=260
+=======
+target4.x=240
+target4.y=400
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target5.height=50
 target5.name=Jackal
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=80
+<<<<<<< HEAD
 target5.x=190
 target5.y=120
+=======
+target5.x=60
+target5.y=190
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target6.height=50
 target6.name=Rabbit
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=80
+<<<<<<< HEAD
 target6.x=10
 target6.y=140
+=======
+target6.x=240
+target6.y=330
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target7.height=50
 target7.name=Rose
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=80
+<<<<<<< HEAD
 target7.x=100
 target7.y=180
+=======
+target7.x=50
+target7.y=470
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target8.height=50
 target8.name=Brush
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=80
+<<<<<<< HEAD
 target8.x=10
 target8.y=200
+=======
+target8.x=350
+target8.y=470
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
 target9.height=50
 target9.name=Carnivore
 target9.showInterface=false
 target9.type=InterfaceTarget
 target9.width=80
+<<<<<<< HEAD
 target9.x=140
 target9.y=60
+=======
+target9.x=270
+target9.y=10
+>>>>>>> 0134d636da6f97fb330625cb70d8c60cfb7b8033
