@@ -30,11 +30,6 @@ public class Runner
          */
     }
 
-    private static void test(Animal a)
-    {
-        a.die();
-    }
-    
     private static void newDay()
     {
          for(Animal[] group : animals)
@@ -71,7 +66,6 @@ public class Runner
                     String[] foodChoices = animals[i][j].getFoodTypes();
                     int choice = (int)(Math.random() * foodChoices.length);
                     Organism meal = findFood(foodChoices[choice], animals[i][j].getType());
-
                     animals[i][j].eat(meal);
                 }
             }   
