@@ -11,7 +11,6 @@ public class FGoat extends Goat implements Female
     private static int totalBorn = 0;
     private static final int MAX_LITTER_SIZE = 3;
     private static final int LITTER_SIZE = 1;
-    private final int WEANING_AGE = 105;
     private final int GESTATION_DURATION = 150;
     private final int INTERBIRTH_INTERVAL = 70;
     private boolean isPregnant;
@@ -22,11 +21,6 @@ public class FGoat extends Goat implements Female
     public FGoat()
     {
         super();
-    }
-
-    public int getWeaningAge()
-    {
-        return WEANING_AGE;
     }
     
     public int getGestationDuration()

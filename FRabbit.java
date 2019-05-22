@@ -23,11 +23,6 @@ public class FRabbit extends Rabbit implements Female
     {
         super();
     }
-
-    public int getWeaningAge()
-    {
-        return WEANING_AGE;
-    }
     
     public int getGestationDuration()
     {

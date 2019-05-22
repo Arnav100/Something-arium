@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=UI
-comment0.text=\n\ Receives\ input\ data\ from\ the\ user\n\n\ @author\ Gabe\ Robare\n\ @version\ May\ 3,\ 2019\n
+comment0.text=\r\n\ Receives\ input\ data\ from\ the\ user\r\n\r\n\ @author\ Gabe\ Robare\r\n\ @version\ May\ 3,\ 2019\r\n
 comment1.params=
 comment1.target=UI()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ UI;\ prints\ an\ interface\ into\ which\ users\ enter\n\ initial\ data\n
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ UI;\ prints\ an\ interface\ into\ which\ users\ enter\r\n\ initial\ data\r\n
 comment2.params=type
 comment2.target=Animal\ makeAnimal(java.lang.String)
 comment3.params=type\ acres
