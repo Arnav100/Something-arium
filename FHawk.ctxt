@@ -1,17 +1,18 @@
 #BlueJ class context
 comment0.target=FHawk
-comment0.text=\n\ Write\ a\ description\ of\ class\ FHawk\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ FHawk\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=FHawk()
-<<<<<<< HEAD
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ FHawk\n
-comment2.params=
-comment2.target=int\ reproduce()
-comment2.text=\n\ \n
-=======
 comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ FGoat\r\n
 comment2.params=
-comment2.target=Animal[]\ reproduce()
-comment2.text=\r\n\ \r\n
->>>>>>> 01b6cec1606fbed90afab1a97b0c55eafdf24ce0
-numComments=3
+comment2.target=int\ getWeaningAge()
+comment3.params=
+comment3.target=int\ getGestationDuration()
+comment4.params=
+comment4.target=int\ getInterbirthInterval()
+comment5.params=
+comment5.target=boolean\ isPregnant()
+comment6.params=
+comment6.target=Animal[]\ reproduce()
+comment6.text=\r\n\ \r\n
+numComments=7

@@ -20,6 +20,7 @@ public interface Female
     
     public int getInterbirthInterval();
     
-    public int isPregnant();
+    public boolean isPregnant();
+    
     public Animal[] reproduce();
 }
