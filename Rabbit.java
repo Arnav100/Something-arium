@@ -10,13 +10,14 @@ public class Rabbit extends Animal implements Herbivore
     private static final int STARTING_MASS = 90; 
     private static final int MAX_MASS = 2260;
     private static final int MAX_AGE = 8;
+    private static final int FERTILE_AGE = 243;
     
     /**
      * 
      */
     public Rabbit()
     {
-        super( STARTING_MASS, MAX_MASS, MAX_AGE );
+        super( STARTING_MASS, MAX_MASS, MAX_AGE, FERTILE_AGE );
     }
     
     /**

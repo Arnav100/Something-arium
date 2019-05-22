@@ -10,13 +10,14 @@ public class Goat extends Animal implements Herbivore
     private static final int STARTING_MASS = 2720; 
     private static final int MAX_MASS = 77110;
     private static final int MAX_AGE = 18;
+    private static final int FERTILE_AGE = 912;
     
     /**
      *
      */
     public Goat()
     {
-        super( STARTING_MASS, MAX_MASS, MAX_AGE );
+        super( STARTING_MASS, MAX_MASS, MAX_AGE, FERTILE_AGE );
     }
     
     /**
