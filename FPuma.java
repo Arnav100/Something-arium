@@ -36,7 +36,8 @@ public class FPuma extends Puma implements Female
 
     public void startPregnancy()
     {
-        if(!isPregnant && isFertile() && getDaysAlive() > pregStartAge + getInterbirthInterval() + getGestationDuration()  )
+        if(!isPregnant && isFertile() && getDaysAlive() > pregStartAge +
+        getInterbirthInterval() + getGestationDuration()  )
         {
             pregStartAge = getDaysAlive();
             isPregnant = true;

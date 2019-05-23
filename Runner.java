@@ -51,8 +51,6 @@ public class Runner
          }
     }
 
-    private static void 
-    
     private static void feedingTime()
     {
             //idea of using leftOvers by keeping a variable set in outer loop
