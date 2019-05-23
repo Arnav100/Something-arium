@@ -21,8 +21,8 @@ public class UI
         Scanner in = new Scanner( System.in );
         System.out.println( "Please enter a starting population number for each of the " +
         "following:" + "\n\n" );
-        String[] animalNames = { "Wild Goat", "Black Tailed Rabbit", "Great Horned Owl",
-            "Red-Tailed Hawk", "Golden Jackal", "Puma" };
+        String[] animalNames = { "Puma", "Golden Jackal","Great Horned Owl", "Wild Goat",
+            "Red-Tailed Hawk", "Black Tailed Rabbit" };
             
         animals = new Animal[NUM_ANIMALS][];
         for( int i = 0; i < animals.length; i++ )
