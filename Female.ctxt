@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Female
-comment0.text=\r\n\ Write\ a\ description\ of\ interface\ Female\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Write\ a\ description\ of\ interface\ Female\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
 comment1.params=
 comment1.target=int\ getGestationDuration()
 comment2.params=
@@ -8,16 +8,9 @@ comment2.target=int\ getInterbirthInterval()
 comment3.params=
 comment3.target=boolean\ isPregnant()
 comment4.params=
-<<<<<<< HEAD
-comment4.target=boolean\ isPregnant()
+comment4.target=void\ startPregnancy()
 comment5.params=
-comment5.target=void\ startPregnancy()
+comment5.target=boolean\ isFertile()
 comment6.params=
-comment6.target=boolean\ isFertile()
-comment7.params=
-comment7.target=Animal[]\ reproduce()
-numComments=8
-=======
-comment4.target=Animal[]\ reproduce()
-numComments=5
->>>>>>> 89b65d8903fe6c0c960dd78c4411ee43d9433030
+comment6.target=Animal[]\ reproduce()
+numComments=7
