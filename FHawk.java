@@ -45,7 +45,7 @@ public class FHawk extends Hawk implements Female
 
     public boolean isFertile()
     {
-        return getDaysAlive() > getFertileAge();
+        return getDaysAlive() >= getFertileAge();
     }
     
     public boolean isPregnant()
@@ -76,6 +76,7 @@ public class FHawk extends Hawk implements Female
                     litter[i] = new FHawk();
                 else
                     litter[i] = new Hawk();
+            isPregnant = false;
             return litter;
         }   
         return null;

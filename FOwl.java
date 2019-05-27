@@ -41,11 +41,13 @@ public class FOwl extends Owl implements Female
             pregStartAge = getDaysAlive();
             isPregnant = true;
         }
+       // else
+       //      System.out.println("Owl " + name + " can't start pregnancy yet");
     }
 
     public boolean isFertile()
     {
-        return getDaysAlive() > getFertileAge();
+        return getDaysAlive() >= getFertileAge();
     }
     
     public boolean isPregnant()
@@ -58,6 +60,7 @@ public class FOwl extends Owl implements Female
      */
     public Animal[] reproduce()
     {
+      //  System.out.println("Owl " + name + " age: " + getDaysAlive());
         if(!isPregnant)
             startPregnancy(); 
         else if(getDaysAlive() > getGestationDuration() + pregStartAge)
@@ -70,14 +73,21 @@ public class FOwl extends Owl implements Female
                     LITTER_SIZE + 1 );
             else
                 size = (int)( LITTER_SIZE * Math.random() );
+                
             Animal[] litter = new Animal[ size ];
             for( int i = 0; i < size; i++ )
                 if( Math.random() < .5 )
                     litter[i] = new FOwl();
                 else
                     litter[i] = new Owl();
+            isPregnant = false;
+        //    System.out.println("Owl " + name + " gave birth!");
             return litter;
         }   
+        else if(isPregnant)
+        {
+         //   System.out.println("Owl " + name + "is pregnant. " + (getGestationDuration() + pregStartAge - getDaysAlive()));
+        }
         return null;
     }
 }

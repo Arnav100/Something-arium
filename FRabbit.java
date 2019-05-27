@@ -46,7 +46,7 @@ public class FRabbit extends Rabbit implements Female
 
     public boolean isFertile()
     {
-        return getDaysAlive() > getFertileAge();
+        return getDaysAlive() >= getFertileAge();
     }
     
     public boolean isPregnant()
@@ -63,6 +63,7 @@ public class FRabbit extends Rabbit implements Female
             startPregnancy(); 
         else if(getDaysAlive() > getGestationDuration() + pregStartAge)
         {
+            System.out.println("Rabbit " + name + " is giving birth!");
             int size;
             if( totalLitters == 0 )
                 size = (int)( ( MAX_LITTER_SIZE + 1 ) * Math.random() );
@@ -77,7 +78,9 @@ public class FRabbit extends Rabbit implements Female
                     litter[i] = new FRabbit();
                 else
                     litter[i] = new Rabbit();
+            isPregnant = false;
             return litter;
+          
         }   
         return null;
     }

@@ -46,7 +46,7 @@ public class FPuma extends Puma implements Female
 
     public boolean isFertile()
     {
-        return getDaysAlive() > getFertileAge();
+        return getDaysAlive() >= getFertileAge();
     }
 
     public boolean isPregnant()
@@ -77,6 +77,7 @@ public class FPuma extends Puma implements Female
                     litter[i] = new FPuma();
                 else
                     litter[i] = new Puma();
+            isPregnant = false;
             return litter;
         }   
         return null;

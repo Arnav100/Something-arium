@@ -41,11 +41,13 @@ public class FJackal extends Jackal implements Female
             pregStartAge = getDaysAlive();
             isPregnant = true;
         }
+        // else
+             // System.out.println("Owl " + name + " can't start pregnancy yet");
     }
 
     public boolean isFertile()
     {
-        return getDaysAlive() > getFertileAge();
+        return getDaysAlive() >= getFertileAge();
     }
     
     public boolean isPregnant()
@@ -58,6 +60,7 @@ public class FJackal extends Jackal implements Female
      */
     public Animal[] reproduce()
     {
+    //    System.out.println("Jackal " + name + " age: " + getDaysAlive());
         if(!isPregnant)
             startPregnancy(); 
         else if(getDaysAlive() > getGestationDuration() + pregStartAge)
@@ -76,8 +79,14 @@ public class FJackal extends Jackal implements Female
                     litter[i] = new FJackal();
                 else
                     litter[i] = new Jackal();
+            isPregnant = false;
+     //       System.out.println("Jackal " + name + " gave birth!");
             return litter;
-        }   
+        }  
+        else if(isPregnant)
+        {
+      //      System.out.println("Jackal " + name + "is pregnant. " + (getGestationDuration() + pregStartAge - getDaysAlive()));
+        }
         return null;
     }
 }

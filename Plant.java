@@ -22,6 +22,7 @@ public abstract class Plant implements Organism
         this.maxIndiviualMass = maxIndiviualMass;
         this.maxSpeciesMass = acres * plantDensity * maxIndiviualMass;
         this.speciesMass = maxSpeciesMass;
+        isAlive = true;
     }
 
     public void grow()
@@ -34,6 +35,7 @@ public abstract class Plant implements Organism
     public void reduce( double amountEaten )
     {
         speciesMass -= amountEaten;
+      //  System.out.println("Amount eaten: " + amountEaten + "New Species mass " + speciesMass + "for " + getType());
         if(speciesMass < 0)
             isAlive = false;
     }

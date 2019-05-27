@@ -45,7 +45,7 @@ public class FGoat extends Goat implements Female
 
     public boolean isFertile()
     {
-        return getDaysAlive() > getFertileAge();
+        return getDaysAlive() >= getFertileAge();
     }
     
     public boolean isPregnant()
@@ -76,6 +76,7 @@ public class FGoat extends Goat implements Female
                     litter[i] = new FGoat();
                 else
                     litter[i] = new Goat();
+            isPregnant = false;
             return litter;
         }   
         return null;
