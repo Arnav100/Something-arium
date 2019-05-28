@@ -1,16 +1,22 @@
 #BlueJ class context
 comment0.target=Female
-comment0.text=\r\n\ Write\ a\ description\ of\ interface\ Female\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\n\ Contains\ methods\ necessary\ only\ to\ Female\ Animals,\ being\ related\ to\ reproduction\n\n\ @author\ Gabe\ Robare,\ Arnav\ Parashar,\ and\ Dana\ Nigrin\n\ @version\ May\ 27,\ 2019\n
 comment1.params=
 comment1.target=int\ getGestationDuration()
+comment1.text=\n\ Returns\ the\ gestation\ duration\n\ \n\ @return\ the\ gestation\ duration\n
 comment2.params=
 comment2.target=int\ getInterbirthInterval()
+comment2.text=\n\ Returns\ the\ interbirth\ interval\n\ \n\ @return\ the\ interbirth\ interval\n
 comment3.params=
-comment3.target=boolean\ isPregnant()
+comment3.target=boolean\ isFertile()
+comment3.text=\n\ Returns\ whether\ the\ individual\ is\ past\ its\ fertile\ age\n\ \n\ @return\ true\ if\ the\ animal\ is\ older\ than\ its\ fertile\ age,\ false\ otherwise\n
 comment4.params=
-comment4.target=void\ startPregnancy()
+comment4.target=boolean\ isPregnant()
+comment4.text=\n\ Returns\ whether\ the\ individual\ is\ pregnant\n\ \n\ @return\ true\ if\ the\ individual\ is\ pregnant,\ false\ otherwise\n
 comment5.params=
-comment5.target=boolean\ isFertile()
+comment5.target=void\ startPregnancy()
+comment5.text=\n\ If\ the\ individual\ is\ not\ already\ pregnant,\ is\ fertile,\ and\ enough\ time\ has\n\ \ passed\ since\ its\ last\ pregnancy,\ makes\ the\ individual\ pregnant\n
 comment6.params=
 comment6.target=Animal[]\ reproduce()
+comment6.text=\n\ Creates\ an\ array\ of\ new\ individuals\ as\ offspring\ to\ a\ pregnant\ individual\n\ \n\ @return\ the\ array\ of\ new\ individuals,\ based\ on\ the\ average\ litter\ size\n
 numComments=7

@@ -1,9 +1,8 @@
-
 /**
- * Write a description of class FOwl here.
+ * Creates Female Animal objects of type Owl
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Gabe Robare, Arnav Parashar, and Dana Nigrin
+ * @version May 27, 2019
  */
 public class FOwl extends Owl implements Female
 {
@@ -15,79 +14,98 @@ public class FOwl extends Owl implements Female
     private final int INTERBIRTH_INTERVAL = 91;
     private int pregStartAge;
     private boolean isPregnant;
-    
+
     /**
-     * Constructor for objects of class FGoat
+     * Creates Female Owl objects by calling the Owl constructor
      */
     public FOwl()
     {
         super();
     }
-    
+
+    /**
+     * Returns the gestation duration
+     * 
+     * @return the gestation duration
+     */
     public int getGestationDuration()
     {
         return GESTATION_DURATION;
     }
-    
+
+    /**
+     * Returns the interbirth interval
+     * 
+     * @return the interbirth interval
+     */
     public int getInterbirthInterval()
     {
         return INTERBIRTH_INTERVAL;
     }
-    
-    public void startPregnancy()
-    {
-        if(!isPregnant && isFertile() && getDaysAlive() > pregStartAge + getInterbirthInterval() + getGestationDuration()  )
-        {
-            pregStartAge = getDaysAlive();
-            isPregnant = true;
-        }
-       // else
-       //      System.out.println("Owl " + name + " can't start pregnancy yet");
-    }
 
+    /**
+     * Returns whether the individual is past its fertile age
+     * 
+     * @return true if the animal is older than its fertile age, false otherwise
+     */
     public boolean isFertile()
     {
         return getDaysAlive() >= getFertileAge();
     }
-    
+
+    /**
+     * Returns whether the individual is pregnant
+     * 
+     * @return true if the individual is pregnant, false otherwise
+     */
     public boolean isPregnant()
     {
         return isPregnant;
     }
-    
+
     /**
+     * If the individual is not already pregnant, is fertile, and enough time has
+     *  passed since its last pregnancy, makes the individual pregnant
+     */
+    public void startPregnancy()
+    {
+        if( !isPregnant && isFertile() && 
+        getDaysAlive() > pregStartAge + getInterbirthInterval() + 
+        getGestationDuration() )
+        {
+            pregStartAge = getDaysAlive();
+            isPregnant = true;
+        }
+    }
+
+    /**
+     * Creates an array of new individuals as offspring to a pregnant individual
      * 
+     * @return the array of new individuals, based on the average litter size
      */
     public Animal[] reproduce()
     {
-      //  System.out.println("Owl " + name + " age: " + getDaysAlive());
-        if(!isPregnant)
+        if( !isPregnant )
             startPregnancy(); 
-        else if(getDaysAlive() > getGestationDuration() + pregStartAge)
+        else if( getDaysAlive() > getGestationDuration() + pregStartAge )
         {
             int size;
             if( totalLitters == 0 )
                 size = (int)( ( MAX_LITTER_SIZE + 1 ) * Math.random() );
             else if( 1.0 * totalBorn / totalLitters < LITTER_SIZE )
                 size = (int)( ( MAX_LITTER_SIZE - LITTER_SIZE ) * Math.random() +
-                    LITTER_SIZE + 1 );
+                                LITTER_SIZE + 1 );
             else
                 size = (int)( LITTER_SIZE * Math.random() );
-                
             Animal[] litter = new Animal[ size ];
             for( int i = 0; i < size; i++ )
                 if( Math.random() < .5 )
-                    litter[i] = new FOwl();
+                    litter[ i ] = new FOwl();
                 else
-                    litter[i] = new Owl();
+                    litter[ i ] = new Owl();
             isPregnant = false;
-        //    System.out.println("Owl " + name + " gave birth!");
             return litter;
         }   
-        else if(isPregnant)
-        {
-         //   System.out.println("Owl " + name + "is pregnant. " + (getGestationDuration() + pregStartAge - getDaysAlive()));
-        }
         return null;
     }
 }

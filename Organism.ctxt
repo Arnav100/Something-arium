@@ -1,9 +1,13 @@
 #BlueJ class context
 comment0.target=Organism
+comment0.text=\n\ Contains\ methods\ necessary\ for\ both\ Plants\ and\ Animals\n\ \n\ @author\ Gabe\ Robare,\ Arnav\ Parashar,\ and\ Dana\ Nigrin\n\ @version\ May\ 27,\ 2019\n
 comment1.params=
 comment1.target=double\ getMass()
+comment1.text=\n\ Returns\ the\ mass\ of\ the\ Organism\n\ \n\ @return\ the\ mass\ of\ the\ Organism\n
 comment2.params=
 comment2.target=boolean\ isAlive()
+comment2.text=\n\ Returns\ whether\ the\ Organism\ is\ alive\n\ \n\ @return\ true\ if\ the\ Organism\ is\ alive,\ false\ otherwise\n
 comment3.params=
 comment3.target=java.lang.String\ getType()
+comment3.text=\n\ Returns\ the\ type\ of\ Organism\ as\ a\ String\n\ \n\ @return\ the\ type\ of\ Organism\n
 numComments=4

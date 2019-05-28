@@ -1,11 +1,10 @@
 #BlueJ class context
 comment0.target=Rose
-comment0.text=\n\ Creates\ and\ analyzes\ Rose\ species\ objects\n\n\ @author\ Gabe\ Robare\n\ @version\ May\ 20,\ 2019\n
+comment0.text=\n\ Creates\ and\ analyzes\ Rose\ species\ objects\n\n\ @author\ Gabe\ Robare,\ Arnav\ Parashar,\ and\ Dana\ Nigrin\n\ @version\ May\ 27,\ 2019\n
 comment1.params=acres
 comment1.target=Rose(double)
 comment1.text=\n\ Creates\ Rose\ species\ objects\ of\ a\ certain\ area\ in\ acres\n\ \n\ @param\ acres\ the\ amount\ of\ acres\ that\ the\ Rose\ object\ covers\n
 comment2.params=
-comment2.target=void\ printMass()
-comment3.params=
-comment3.target=java.lang.String\ getType()
-numComments=4
+comment2.target=java.lang.String\ getType()
+comment2.text=\n\ Returns\ the\ type\ as\ a\ String\n\ \n\ @return\ the\ type\ as\ a\ String\n
+numComments=3

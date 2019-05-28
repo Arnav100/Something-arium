@@ -1,9 +1,8 @@
-
 /**
- * Write a description of class Puma here.
+ * Creates and analyzes Puma species objects
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Gabe Robare, Arnav Parashar, and Dana Nigrin
+ * @version May 27, 2019
  */
 public class Puma extends Animal implements Carnivore
 {
@@ -14,7 +13,8 @@ public class Puma extends Animal implements Carnivore
     private static final int WEANING_AGE = 730;
     
     /**
-     *
+     * Creates Goat species objects based on its starting mass, maximum mass, 
+     *  maximum age, fertile age, and weaning age
      */
     public Puma()
     {
@@ -22,7 +22,9 @@ public class Puma extends Animal implements Carnivore
     }
     
     /**
+     * Returns the type as a String
      * 
+     * @return the type as a String
      */
     public String getType()
     {
@@ -30,7 +32,9 @@ public class Puma extends Animal implements Carnivore
     }
     
     /**
+     * Returns the types of food eaten by the Puma as an array of Strings
      * 
+     * @return the food types as a String
      */
     public String[] getFoodTypes()
     {

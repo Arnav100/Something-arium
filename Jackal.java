@@ -1,9 +1,8 @@
-
 /**
- * Write a description of class Jackal here.
+ * Creates and analyzes Jackal species objects
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Gabe Robare, Arnav Parashar, and Dana Nigrin
+ * @version May 27, 2019
  */
 public class Jackal extends Animal implements Carnivore
 {
@@ -14,7 +13,8 @@ public class Jackal extends Animal implements Carnivore
     private static final int WEANING_AGE = 56;
     
     /**
-     *
+     * Creates Goat species objects based on its starting mass, maximum mass, 
+     *  maximum age, fertile age, and weaning age
      */
     public Jackal()
     {
@@ -22,7 +22,9 @@ public class Jackal extends Animal implements Carnivore
     }
     
     /**
+     * Returns the type as a String
      * 
+     * @return the type as a String
      */
     public String getType()
     {
@@ -30,7 +32,9 @@ public class Jackal extends Animal implements Carnivore
     }
     
     /**
+     * Returns the types of food eaten by the Jackal as an array of Strings
      * 
+     * @return the food types as a String
      */
     public String[] getFoodTypes()
     {

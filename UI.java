@@ -1,9 +1,9 @@
 import java.util.Scanner;
 /**
- * Receives input data from the user
+ * Receives input data from the user and creates arrays of Organisms
  *
- * @author Gabe Robare
- * @version May 3, 2019
+ * @author Gabe Robare, Arnav Parashar, and Dana Nigrin
+ * @version May 27, 2019
  */
 public class UI
 {
@@ -13,49 +13,46 @@ public class UI
     private final int NUM_PLANTS = 3;
     
     /**
-     * Constructor for objects of class UI; prints an interface into which users enter
-     * initial data
+     * Constructor for objects of class UI. Prints an interface into which users 
+     * enter initial data
      */
     public UI()
     {
         Scanner in = new Scanner( System.in );
-        System.out.println( "Please enter a starting population number for each of the " +
-        "following:" + "\n\n" );
-        String[] animalNames = { "Golden Jackal","Puma", "Great Horned Owl", "Wild Goat",
-            "Red-Tailed Hawk", "Black Tailed Rabbit" };
-            
-        animals = new Animal[NUM_ANIMALS][];
+        
+        System.out.println( "Please enter a starting population number for each " 
+            + "of the following:" + "\n\n" );
+        animals = new Animal[ NUM_ANIMALS ][];
+        String[] animalNames = { "Golden Jackal","Puma", "Great Horned Owl", 
+            "Wild Goat", "Red-Tailed Hawk", "Black Tailed Rabbit" };
         for( int i = 0; i < animals.length; i++ )
         {
             System.out.print( animalNames[ i ] + ": " );
-            animals[i] = new Animal[in.nextInt()];
-            for(int j = 0; j < animals[i].length; j ++)
+            animals[ i ] = new Animal[ in.nextInt() ];
+            for(int j = 0; j < animals[ i ].length; j ++)
             {
-                animals[i][j] = makeAnimal(animalNames[i]);
-                animals[i][j].becomeAdult();
+                animals[ i ][ j ] = makeAnimal( animalNames[ i ] );
+                animals[ i ][ j ].becomeAdult();
             }
-            
             System.out.print( "\n" );
         }
         
-        System.out.println( "Please enter a starting acreage of coverage for each of " +
-        "the following (note: 1 acre = 43,560 sqft):" + "\n\n" );
-        plants = new Plant[NUM_PLANTS];
+        System.out.println( "Please enter a starting acreage of coverage for each"
+            + "of the following (note: 1 acre = 43,560 sqft):" + "\n\n" );
+        plants = new Plant[ NUM_PLANTS ];
         String[] plantNames = { "Coyote Brush", "Blue Oak", "Mountain Mahogany" };
         for( int i = 0; i < plants.length; i++ )
         {
             System.out.print( plantNames[ i ] + ": " );
-            plants[ i ] = makePlant(plantNames[i], in.nextInt());
+            plants[ i ] = makePlant( plantNames[ i ], in.nextInt() );
             System.out.print( "\n" );
-
-        }        
-
+        }
+        in.close();
     }
-    
-    public Animal makeAnimal(String type)
+    private Animal makeAnimal( String type )
     {
         boolean isFemale = Math.random() < 0.5;
-        switch(type)
+        switch( type )
         {
             case "Wild Goat": 
                return isFemale ? new FGoat() : new Goat();
@@ -70,38 +67,42 @@ public class UI
             case "Puma":
                 return isFemale ? new FPuma() : new Puma();
         }
-        System.out.println("ERROR: " + type + " NOT FOUND!");
+        System.out.println( "ERROR: " + type + " NOT FOUND!" );
         return null;
     }
-    
-    public Plant makePlant(String type, int acres)
+    private Plant makePlant( String type, int acres )
     {
-        switch(type)
+        switch( type )
         {
             case"Coyote Brush":
-                return new Brush(acres);
+                return new Brush( acres );
             case "Blue Oak":
-                return new Oak(acres);
+                return new Oak( acres );
             case "Mountain Mahogany":
-                return new Rose(acres);
+                return new Rose( acres );
         }
-        System.out.println("ERROR: " + type + " NOT FOUND!");
+        System.out.println( "ERROR: " + type + " NOT FOUND!" );
         return null;
     }
     
+    /**
+     * Returns the array of species of Animals
+     * 
+     * @return the 2-D array of Animals, with each index containing an array 
+     *  of the Animals of a certain species
+     */
     public Animal[][] getAnimals()
     {
         return animals;
     }
-    
+    /**
+     * Returns the array of Plant species objects
+     * 
+     * @return the array of Plants, with each index representing a species of 
+     *  Plant
+     */
     public Plant[] getPlants()
     {
         return plants;
-    }
-    
-    public void printMass( Plant plant, String name )
-    {
-        System.out.println("The mass of the " + name + " are: " + plant.getMass() );
-
     }
 }

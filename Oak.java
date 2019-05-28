@@ -1,9 +1,8 @@
-
 /**
  * Creates and analyzes Oak species objects
  *
- * @author Gabe Robare
- * @version May 6, 2019
+ * @author Gabe Robare, Arnav Parashar, and Dana Nigrin
+ * @version May 27, 2019
  */
 public class Oak extends Plant
 {
@@ -16,16 +15,16 @@ public class Oak extends Plant
      * 
      * @param acres the amount of acres that the Oak object covers
      */
-    public Oak(double acres)
+    public Oak( double acres )
     {
         super( MAX_MASS, PLANT_DENSITY, GROWTH_RATE, acres);
     }
     
-    public void printMass()
-    {
-        super.printMass( "Oak" );
-    }
-    
+    /**
+     * Returns the type as a String
+     * 
+     * @return the type as a String
+     */
     public String getType()
     {
         return "oak";
