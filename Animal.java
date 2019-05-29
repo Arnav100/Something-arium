@@ -21,6 +21,7 @@ public abstract class Animal implements Organism
     private final int TROPHIC_EFFICIENCY_DOWN = 10;
     private final double TROPHIC_EFFICIENCY_UP = 0.1;
     private final double EDIBLE_CARCASS_MASS = 0.5;
+    private final int DAYS_IN_YEAR = 365;
     private double hunger; 
     private int starvingDays;
     
@@ -129,7 +130,7 @@ public abstract class Animal implements Organism
         
         if( starvingDays >= DAYS_FOR_STARVATION )
             die();
-        if( daysAlive / 365 >= maxAge )
+        if( daysAlive / DAYS_IN_YEAR >= maxAge )
             die();
     }
     /**

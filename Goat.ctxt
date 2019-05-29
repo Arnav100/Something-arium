@@ -1,13 +1,13 @@
 #BlueJ class context
 comment0.target=Goat
-comment0.text=\n\ Creates\ and\ analyzes\ Goat\ species\ objects\n\n\ @author\ Gabe\ Robare,\ Arnav\ Parashar,\ and\ Dana\ Nigrin\n\ @version\ May\ 27,\ 2019\n
+comment0.text=\r\n\ Creates\ and\ analyzes\ Goat\ species\ objects\r\n\r\n\ @author\ Gabe\ Robare,\ Arnav\ Parashar,\ and\ Dana\ Nigrin\r\n\ @version\ May\ 27,\ 2019\r\n
 comment1.params=
 comment1.target=Goat()
-comment1.text=\n\ Creates\ Goat\ species\ objects\ based\ on\ its\ starting\ mass,\ maximum\ mass,\ \n\ \ maximum\ age,\ fertile\ age,\ and\ weaning\ age\n
+comment1.text=\r\n\ Creates\ Goat\ species\ objects\ based\ on\ its\ starting\ mass,\ maximum\ mass,\ \r\n\ \ maximum\ age,\ fertile\ age,\ and\ weaning\ age\r\n
 comment2.params=
 comment2.target=java.lang.String\ getType()
-comment2.text=\n\ Returns\ the\ type\ as\ a\ String\n\ \n\ @return\ the\ type\ as\ a\ String\n
+comment2.text=\r\n\ Returns\ the\ type\ as\ a\ String\r\n\ \r\n\ @return\ the\ type\ as\ a\ String\r\n
 comment3.params=
 comment3.target=java.lang.String[]\ getFoodTypes()
-comment3.text=\n\ Returns\ the\ types\ of\ food\ eaten\ by\ the\ Goat\ as\ an\ array\ of\ Strings\n\ \n\ @return\ the\ food\ types\ as\ a\ String\n
+comment3.text=\r\n\ Returns\ the\ types\ of\ food\ eaten\ by\ the\ Goat\ as\ an\ array\ of\ Strings\r\n\ \r\n\ @return\ the\ food\ types\ as\ a\ String\r\n
 numComments=4
