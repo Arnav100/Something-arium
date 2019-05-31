@@ -25,8 +25,7 @@ public abstract class Animal implements Organism
     private int starvingDays;
     
     private static int nameLength = 1;
-    /** The name of the Animal as a String */
-    public String name;
+    private String name;
 
     /**
      * Constructs Animal objects based on their parameters and names them
@@ -61,6 +60,14 @@ public abstract class Animal implements Organism
     private void giveName()
     {
         name = "" + nameLength++;
+    }
+    /**
+     * Returns the name of the animal
+     * @return the name of the animal
+     */
+    public String getName()
+    {
+        return name;
     }
     
     /**
@@ -154,7 +161,7 @@ public abstract class Animal implements Organism
             return;
         }
         
-        if( food == null )
+        if( food == null || food.getMass() == 0)
         {
             this.mass *= STARVATION_DECREASE;
             hunger = 0;
@@ -168,7 +175,7 @@ public abstract class Animal implements Organism
             Plant plantFood = (Plant) food;
             if( hunger < mass )
             {
-                plantFood.reduce( hunger * TROPHIC_EFFICIENCY_DOWN );
+                plantFood.reduce( hunger );
                 feed( hunger );
             }
             else
@@ -186,11 +193,17 @@ public abstract class Animal implements Organism
         if( !isHungry() )
             return;
         
-        if( mass > hunger )
+        if( m > hunger )
+        {
             this.mass += hunger * TROPHIC_EFFICIENCY_UP;
+            hunger = 0;
+        }
         else
+        {
             this.mass += m * TROPHIC_EFFICIENCY_UP;
-        hunger -= mass;
+            hunger -= m;
+        }
+       
         if( this.mass > maxMass )
             this.mass = maxMass;
     }

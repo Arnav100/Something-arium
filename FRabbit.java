@@ -86,7 +86,6 @@ public class FRabbit extends Rabbit implements Female
             startPregnancy(); 
         else if( getDaysAlive() > getGestationDuration() + pregStartAge )
         {
-            System.out.println( "Rabbit " + name + " is giving birth!" );
             int size;
             if( totalLitters == 0 )
                 size = (int)( ( MAX_LITTER_SIZE + 1 ) * Math.random() );

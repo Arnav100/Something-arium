@@ -29,18 +29,20 @@ public class Runner
             checkExtincts();
             if( allExtinct )
             {
-                System.out.println( "All died at day " + i );
+                ui.print( "All died at day " + i );
                 break;
             }
             if( i % 50 == 0 )
             {
-                printHunger();
-                printPlantMass();
+                ui.print("Day: " + i);
+                ui.printLiving();
+                ui.printPlantMass();
+                ui.print("\n");
             }
             newDay();
         }
-        printHunger();
-        printPlantMass();
+        ui.printLiving();
+        ui.printPlantMass();
     }
     private static void checkExtincts()
     {
@@ -67,30 +69,8 @@ public class Runner
             for( Animal a : group )
                 a.newDay();
     }
-    private static void printPlantMass()
-    {
-        for( Plant p : plants )
-            System.out.println( p.getMass() );
-    }
-    private static void printHunger()
-    {
-        for( Animal[] group : animals )
-        {
-            int aliveAmount = 0;
-            int total = 0;
-            String type = "";
-            for( Animal a : group )
-            {
-                total++;
-                type = a.getType();
-                if( a.isAlive() )
-                    aliveAmount++;
-            }
-            System.out.println( type + " has " + aliveAmount + " alive out of " 
-                + total );
-            System.out.println( "\n" );
-        }
-    }
+
+
     private static void fertilityTest()
     {
         for( Animal[] group : animals )
@@ -152,13 +132,13 @@ public class Runner
                 if( !animals[ i ][ j ].isAlive() )
                     continue;
                 while( animals[ i ][ j ].isHungry() )
-                {
+                {                  
                     String[] foodChoices = animals[ i ][ j ].getFoodTypes();
                     int choice = (int)( Math.random() * foodChoices.length );
                     Organism meal = findFood( foodChoices[ choice ] );
-                    animals[ i ][ j ].eat( meal );
+                    animals[ i ][ j ].eat( meal );              
                 }
-            }   
+            }     
         }
     }
     private static Organism findFood( String food )

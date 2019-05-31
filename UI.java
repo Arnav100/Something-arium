@@ -105,4 +105,43 @@ public class UI
     {
         return plants;
     }
+    
+    /**
+     * Prints the amount of living animals per population
+     */
+    public void printLiving()
+    {
+        for( Animal[] group : animals )
+        {
+            int aliveAmount = 0;
+            int total = 0;
+            String type = "";
+            for( Animal a : group )
+            {
+                total++;
+                type = a.getType();
+                if( a.isAlive() )
+                    aliveAmount++;
+            }
+            System.out.println( type + " has " + aliveAmount + " alive out of " 
+                + total );
+            System.out.println( "\n" );
+        }
+    }
+    /**
+     * Prints the mass of each plant species
+     */
+    public void printPlantMass()
+    {
+        for( Plant p : plants )
+            System.out.println( p.getType() +" "+ p.getMass() );
+    }
+    /**
+     * Prints the given string s
+     * @param s the String to print
+     */
+    public void print(String s)
+    {
+        System.out.println(s);
+    }
 }
