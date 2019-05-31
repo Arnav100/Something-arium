@@ -74,7 +74,7 @@ public class UI
     {
         switch( type )
         {
-            case"Coyote Brush":
+            case "Coyote Brush":
                 return new Brush( acres );
             case "Blue Oak":
                 return new Oak( acres );
