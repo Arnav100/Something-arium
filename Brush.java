@@ -6,9 +6,9 @@
  */
 public class Brush extends Plant
 {
-    private static final double MAX_MASS = 317000;
-    private static final double PLANT_DENSITY = 14.9;
-    private static final double GROWTH_RATE = 8;
+    private static final double MAX_MASS = 600;
+    private static final double PLANT_DENSITY = 1700;
+    private static final double GROWTH_RATE = .375;
     
     /**
      * Creates Brush species objects of a certain area in acres

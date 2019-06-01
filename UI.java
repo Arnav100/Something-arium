@@ -37,14 +37,14 @@ public class UI
             System.out.print( "\n" );
         }
         
-        System.out.println( "Please enter a starting acreage of coverage for each"
-            + "of the following (note: 1 acre = 43,560 sqft):" + "\n\n" );
+        System.out.println( "Please enter a decimal starting acreage of coverage for each "
+            + "of the following (note: 1 acre = 43,560 sqft, so start small):" + "\n\n" );
         plants = new Plant[ NUM_PLANTS ];
         String[] plantNames = { "Coyote Brush", "Blue Oak", "Mountain Mahogany" };
         for( int i = 0; i < plants.length; i++ )
         {
             System.out.print( plantNames[ i ] + ": " );
-            plants[ i ] = makePlant( plantNames[ i ], in.nextInt() );
+            plants[ i ] = makePlant( plantNames[ i ], in.nextDouble() );
             System.out.print( "\n" );
         }
         in.close();
@@ -70,7 +70,7 @@ public class UI
         System.out.println( "ERROR: " + type + " NOT FOUND!" );
         return null;
     }
-    private Plant makePlant( String type, int acres )
+    private Plant makePlant( String type, double acres )
     {
         switch( type )
         {

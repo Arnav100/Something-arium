@@ -8,7 +8,7 @@ public class Oak extends Plant
 {
     private static final double MAX_MASS = 18000;
     private static final double PLANT_DENSITY = 30;
-    private static final double GROWTH_RATE = 12;
+    private static final double GROWTH_RATE = 3;
     
     /**
      * Creates Oak species objects of a certain area in acres

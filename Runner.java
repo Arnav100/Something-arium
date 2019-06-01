@@ -26,6 +26,7 @@ public class Runner
         {
             feedingTime();
             reproduce();
+            grow();
             checkExtincts();
             if( allExtinct )
             {
@@ -120,7 +121,12 @@ public class Runner
                 newPop[ i ] = babies[ i - population.length ];
         return newPop;
     }
-
+    private static void grow()
+    {
+        for( Plant plant: plants )
+            plant.grow();
+    }
+    
     private static void feedingTime()
     {
         for( int i = 0; i < animals.length; i++ )

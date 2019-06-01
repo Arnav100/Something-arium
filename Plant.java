@@ -21,7 +21,7 @@ public abstract class Plant implements Organism
      * @param maxIndividualMass the maximum mass of an individual Plant as a double
      * @param plantDensity the amount of Plants per acre as a double
      * @param relativeGrowthRate the rate of increase of mass of the Plant in 
-     *  mg / g / day, as a double
+     * mg / g / day, as a double
      * @param acres the area that the Plant species object covers
      */
     public Plant( double maxIndiviualMass, double plantDensity, 
