@@ -162,7 +162,7 @@ public abstract class Animal implements Organism
             return;
         }
         
-        if( food == null )
+        if( food == null || food.getMass() == 0)
         {
             this.mass *= STARVATION_DECREASE;
             hunger = 0;
