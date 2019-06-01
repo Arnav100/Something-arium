@@ -1,9 +1,9 @@
 #BlueJ class context
 comment0.target=Runner
-comment0.text=\n\ Simulates\ the\ ecosystem\ based\ on\ the\ initial\ conditions\ from\ the\ user,\ until\n\ \ all\ Animals\ die\n\n\ @author\ Gabe\ Robare,\ Arnav\ Parashar,\ and\ Dana\ Nigrin\n\ @version\ May\ 27,\ 2019\n
+comment0.text=\r\n\ Simulates\ the\ ecosystem\ based\ on\ the\ initial\ conditions\ from\ the\ user,\ until\r\n\ \ all\ Animals\ die\r\n\r\n\ @author\ Gabe\ Robare,\ Arnav\ Parashar,\ and\ Dana\ Nigrin\r\n\ @version\ May\ 27,\ 2019\r\n
 comment1.params=
 comment1.target=void\ main()
-comment1.text=\n\ Runs\ methods\ to\ simulate\ the\ ecosystem\ until\ all\ Animals\ are\ extinct\n
+comment1.text=\r\n\ Runs\ methods\ to\ simulate\ the\ ecosystem\ until\ all\ Animals\ are\ extinct\r\n
 comment2.params=
 comment2.target=void\ checkExtincts()
 comment3.params=

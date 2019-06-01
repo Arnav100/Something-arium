@@ -76,7 +76,7 @@ public abstract class Plant implements Organism
     public void reduce( double amountEaten )
     {
         speciesMass -= amountEaten;
-        if( speciesMass < 0 )
+        if( speciesMass <= 0 )
             isAlive = false;
     }
     
